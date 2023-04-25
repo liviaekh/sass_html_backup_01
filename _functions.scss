@@ -3,21 +3,24 @@
 
 @mixin gridContainer{
     display: grid;
-    grid-template-columns: auto auto auto;
+    grid-template-areas:
+    'header header header header header header'
+    'menu menu menu menu menu menu' 
+    'main main main main main main'
+    'right right right right right right';
     background-color: $color_background;
     padding: 10px;
  }
 @mixin gridItem{  
     border: 1px solid rgba(0, 0, 0, 0.8);
-    padding: 20px;
+    padding: 10px 0;
     font-size: 30px;
     text-align: center;
 }
 
 @mixin fontProperties {
-    $font_family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: 50px;
-    $color_text: white;
+    color: $color_text;
 
 }
 

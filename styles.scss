@@ -12,29 +12,22 @@ body{
 .item4 { grid-area: right; }
 
 .grid-container {
-  display: grid;
-  grid-template-areas:
-    'header header header header header header'
-    'menu menu menu menu menu menu' 
-    'main main main main main main'
-    'right right right right right right';
+  @include gridContainer;
   gap: 10px;
   background-color: $color_item;
   padding: 20px;
 }
 
 .grid-container > div {
-  background-color: rgba(228, 0, 0, 0.8);
-  text-align: center;
-  padding: 10px 0;
-  font-size: 30px;
+  background-color: $color_item;
+  @include gridItem;
 }
 
 p{
-    color: $color_text;
-    height: 50px;
-    
-  }
+  @include fontProperties;
+  font-family:'Times New Roman', Times, serif;
+}
+
 img{
   @include imgSize;
   
