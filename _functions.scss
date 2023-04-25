@@ -4,11 +4,10 @@
 @mixin gridContainer{
     display: grid;
     grid-template-columns: auto auto auto;
-    background-color: #2196F3;
+    background-color: $color_background;
     padding: 10px;
  }
-@mixin gridItem{
-    background-color: rgba(255, 255, 255, 0.8);
+@mixin gridItem{  
     border: 1px solid rgba(0, 0, 0, 0.8);
     padding: 20px;
     font-size: 30px;
@@ -16,9 +15,10 @@
 }
 
 @mixin fontProperties {
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    $font_family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: 50px;
-    color: white;
+    $color_text: white;
+
 }
 
 @mixin imgSize{
@@ -31,4 +31,6 @@
     width: 1000vw;
     height: 5000vh;
 }
+
+
 
