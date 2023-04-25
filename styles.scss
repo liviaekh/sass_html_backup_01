@@ -1,0 +1,41 @@
+@import "_variables";
+@import "_functions";
+
+body{
+  background-color: $color_background;
+  
+}
+
+.item1 { grid-area: header; }
+.item2 { grid-area: menu; }
+.item3 { grid-area: main; }
+.item4 { grid-area: right; }
+
+.grid-container {
+  display: grid;
+  grid-template-areas:
+    'header header header header header header'
+    'menu menu menu menu menu menu' 
+    'main main main main main main'
+    'right right right right right right';
+  gap: 10px;
+  background-color: #2196F3;
+  padding: 20px;
+}
+
+.grid-container > div {
+  background-color: rgba(228, 0, 0, 0.8);
+  text-align: center;
+  padding: 10px 0;
+  font-size: 30px;
+}
+
+p{
+    color: $color_text;
+    height: 50px;
+    
+  }
+img{
+  @include imgSize;
+  
+}
