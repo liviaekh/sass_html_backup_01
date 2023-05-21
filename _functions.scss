@@ -12,15 +12,22 @@
     padding: 10px;
  }
 @mixin gridItem{  
-    border: 1px solid rgba(0, 0, 0, 0.8);
+    border: 1px solid rgba(255, 255, 255, 0.8);
     padding: 10px 0;
     font-size: 30px;
     text-align: center;
 }
 
+@mixin itemBackground{
+    background-repeat: no-repeat;
+    background-position-x: center;
+}
+
 @mixin fontProperties {
-    font-size: 50px;
-    color: $color_text;
+    font-size: 30px;
+    animation-name: example;
+    animation-iteration-count: infinite;
+    animation-duration: 5s;
 
 }
 
@@ -30,10 +37,19 @@
 
 }
 
+
 @mixin containerSize{
     width: 1000vw;
     height: 5000vh;
 }
+
+@keyframes example {
+    0%   {color: rgb(0, 0, 0);}
+    25%  {color: rgb(165, 165, 165);}
+    50%  {color: rgb(25, 0, 255);}
+    75%  {color: rgb(133, 5, 5);}
+    100% {color: rgb(0, 0, 0);}
+  }
 
 
 

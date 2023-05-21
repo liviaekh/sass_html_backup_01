@@ -2,19 +2,43 @@
 @import "_functions";
 
 body{
+  margin: 0%;
   background-color: $color_background;
-  
+
 }
 
 .item1 { grid-area: header; }
 .item2 { grid-area: menu; }
-.item3 { grid-area: main; }
+.item3 { grid-area: main  ; }
 .item4 { grid-area: right; }
+
+.item1 {
+  background-image: url("spiderweb_transparent.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.item2{
+  background-image: url("logo_tobey_edited2.png");
+  @include itemBackground;
+
+  
+}
+.item3{
+  background-image: url("andrew_transparent.png");
+  @include itemBackground;
+  
+  
+}
+.item4{
+  background-image: url("spider_logo_tom_edited.png");
+  @include itemBackground;
+  
+}
 
 .grid-container {
   @include gridContainer;
   gap: 10px;
-  background-color: $color_item;
   padding: 20px;
 }
 
@@ -22,10 +46,22 @@ body{
   background-color: $color_item;
   @include gridItem;
 }
+h1{
+  text-shadow: 7px 5px #000000;
+  color: white;
+
+}
 
 p{
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  color: $color_text;
+
+}
+
+
+.change{
   @include fontProperties;
-  font-family:'Times New Roman', Times, serif;
+  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
 img{
